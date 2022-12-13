@@ -1,5 +1,5 @@
 {
-  "name": "react-native-check-ip",
+  "name": "@mobeuv/react-native-check-ip",
   "version": "1.1.0",
   "description": "test",
   "main": "lib/commonjs/index",
@@ -48,7 +48,8 @@
   },
   "homepage": "https://github.com/mobeuv/react-native-check-ip#readme",
   "publishConfig": {
-    "registry": "https://registry.npmjs.org/"
+    "registry": "https://registry.npmjs.org/",
+    "access": "public"
   },
   "devDependencies": {
     "@commitlint/config-conventional": "^17.0.2",
