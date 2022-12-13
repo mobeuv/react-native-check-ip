@@ -1,4 +1,9 @@
-# react-native-check-ip
+<p align="center">
+  <img src="./assets/banner.png" alt="i18n">
+</p>
+<p align="center">
+  <a href="https://tldrlegal.com/license/mit-license"><img src="https://img.shields.io/:License-MIT-blue.svg" alt="MIT License"></a>
+</p>
 
 Get public IP address using trusted APIs in React Native.
 
