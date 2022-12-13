@@ -1,18 +1,37 @@
 import * as React from 'react';
 
 import { StyleSheet, View, Text } from 'react-native';
-import { multiply } from 'react-native-check-ip';
+import { CheckIp, getIp } from 'react-native-check-ip';
 
 export default function App() {
-  const [result, setResult] = React.useState<number | undefined>();
+  const [firstResult, setFirstResult] = React.useState<CheckIp | undefined>();
+
+  async function getContent() {
+    const first = await getIp();
+    setFirstResult(first);
+  }
 
   React.useEffect(() => {
-    multiply(3, 7).then(setResult);
+    getContent();
   }, []);
 
   return (
     <View style={styles.container}>
-      <Text>Result: {result}</Text>
+      <View style={styles.box}>
+        <Text>IP: {firstResult?.ipv4}</Text>
+      </View>
+      <View style={styles.box}>
+        <Text>IS Public IP: {firstResult?.isPublicIp ? 'YES' : 'NO'}</Text>
+      </View>
+      <View style={styles.box}>
+        <Text>IS LOCAL IP: {firstResult?.isLocalIp ? 'YES' : 'NO'}</Text>
+      </View>
+      <View style={styles.box}>
+        <Text>Message: {firstResult?.message}</Text>
+      </View>
+      <View style={styles.box}>
+        <Text>Origin: {firstResult?.origin}</Text>
+      </View>
     </View>
   );
 }
@@ -24,8 +43,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   box: {
-    width: 60,
-    height: 60,
-    marginVertical: 20,
+    marginHorizontal: 40,
+    padding: 10,
   },
 });
