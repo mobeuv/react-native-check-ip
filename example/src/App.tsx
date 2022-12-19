@@ -1,7 +1,7 @@
 import * as React from 'react';
 
 import { StyleSheet, View, Text } from 'react-native';
-import { CheckIp, getIp } from 'react-native-check-ip';
+import { CheckIp, getIp } from '@mobeuv/react-native-check-ip';
 
 export default function App() {
   const [firstResult, setFirstResult] = React.useState<CheckIp | undefined>();
