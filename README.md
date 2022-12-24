@@ -10,13 +10,13 @@ Get public IP address using trusted APIs in React Native.
 ## Installation
 
 ```sh
-npm install react-native-check-ip
+npm install @mobeuv/react-native-check-ip
 ```
 
 ## Usage
 
 ```js
-import { getIp } from 'react-native-check-ip';
+import { getIp } from '@mobeuv/react-native-check-ip';
 
 // ...
 const result = await getIp();
